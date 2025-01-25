@@ -10,7 +10,6 @@ body {
   background-color: #f7f7f7;
 }
 
-
 .login-container {
   display: flex;
   height: 100vh;
@@ -48,7 +47,6 @@ body {
   color: #555;
 }
 
-
 .login-form-container {
   flex: 1;
   display: flex;
@@ -58,6 +56,10 @@ body {
   background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-left: 1px solid #ddd;
+}
+
+.login-form-container .title {
+  color: #012244;
 }
 
 .login-form-container h2 {
@@ -96,13 +98,11 @@ body {
 .logbtn:hover {
   background-color: #0056b3;
 }
-p{
+p {
   font-size: 1rem;
   margin-top: 20px;
 }
-Link{
+Link {
   color: #0056b3;
   text-decoration: underline;
-
 }
-

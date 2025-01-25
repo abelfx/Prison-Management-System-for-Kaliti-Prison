@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../../hooks/customhook'; 
-import './Login.css';
-import { toast, ToastContainer } from 'react-toastify';
-import prison_logo from '../../img/prison_logo6.png';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../../hooks/customhook";
+import "./Login.css";
+import { toast, ToastContainer } from "react-toastify";
+import prison_logo from "../../img/prison_logo6.png";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login } = useAuth(); 
-  const [credentials, setCredentials] = useState({ username: '', password: '' });
-  const [error, setError] = useState('');
+  const { login } = useAuth();
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,19 +22,17 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-
       await login(credentials);
-      navigate('/admindashboard'); 
-      toast.success('Signup successful!')
+      navigate("/admindashboard");
+      toast.success("Signup successful!");
     } catch (err) {
-      setError('Invalid username or password'); 
-      toast.error('Login failed. Please try again')
+      setError("Invalid username or password");
+      toast.error("Login failed. Please try again");
     }
   };
 
   return (
     <div className="login-container">
-    
       <div className="image-text-container">
         <img src={prison_logo} alt="Prison Logo" className="prison-logo" />
         <div className="welcome-text">
@@ -40,9 +41,8 @@ const Login = () => {
         </div>
       </div>
 
-    
       <div className="login-form-container">
-        <h2> Login Page</h2>
+        <h2 className="title"> Login Page</h2>
         <form onSubmit={handleLogin}>
           <input
             type="text"
@@ -52,7 +52,8 @@ const Login = () => {
             value={credentials.username}
             onChange={handleChange}
             required
-          /><br />
+          />
+          <br />
           <input
             type="password"
             name="password"
@@ -61,12 +62,18 @@ const Login = () => {
             value={credentials.password}
             onChange={handleChange}
             required
-          /><br />
+          />
+          <br />
           {error && <p className="error-message">{error}</p>}
-          <button className="logbtn" type="submit">Login</button>
+          <button className="logbtn" type="submit">
+            Login
+          </button>
         </form>
         <p>
-          Don't have an account? <Link to="/Signup" className="signup-link">Sign up here</Link>
+          Don't have an account?{" "}
+          <Link to="/Signup" className="signup-link">
+            Sign up here
+          </Link>
         </p>
       </div>
     </div>
