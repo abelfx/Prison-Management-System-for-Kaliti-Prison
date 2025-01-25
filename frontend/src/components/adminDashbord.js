@@ -21,21 +21,21 @@ function AdminDashboard() {
   const fetchData = async () => {
     try {
       const currentResponse = await axios.get(
-        "http://localhost:3500/inmate/getcurrentinmates"
+        "https://prison-management-system-backend.onrender.com/inmate/getcurrentinmates"
       );
       setCurrentInmates(
         currentResponse.data.filter((inmate) => inmate.status === "Current")
       );
 
       const releasedResponse = await axios.get(
-        "http://localhost:3500/inmate/getreleasedinmates"
+        "https://prison-management-system-backend.onrender.com/inmate/getreleasedinmates"
       );
       setReleasedInmates(
         releasedResponse.data.filter((inmate) => inmate.status === "Released")
       );
 
       const wantedResponse = await axios.get(
-        "http://localhost:3500/inmate/getwantedinmates"
+        "https://prison-management-system-backend.onrender.com/inmate/getwantedinmates"
       );
       setWantedInmates(
         wantedResponse.data.filter((inmate) => inmate.status === "Wanted")
@@ -45,7 +45,9 @@ function AdminDashboard() {
     }
 
     try {
-      const jailorResponse = await axios.get("http://localhost:3500/Jailors");
+      const jailorResponse = await axios.get(
+        "https://prison-management-system-backend.onrender.com/Jailors"
+      );
       setJailors(jailorResponse.data);
     } catch (err) {
       console.error("Error Fetching Jailors:", err.message);
@@ -188,8 +190,6 @@ function AdminDashboard() {
               Security Management
             </Link>
           </div>
-
-          
         </div>
 
         <div className="charts">
@@ -214,9 +214,7 @@ function AdminDashboard() {
             <Bar data={inmatesStatusData} />
           </div>
         </div>
-       
       </div>
-     
     </div>
   );
 }
