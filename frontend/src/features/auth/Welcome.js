@@ -7,21 +7,19 @@ const Welcome = () => {
   return (
     <div className="main-container">
       <header className="site-header">
-        <div className="container">
-          <div className="pic-name">
-            <img src={prison_logo} alt="side image" />
-            <h1 className="brand-logo">Prison Management</h1>
-          </div>
-
-          <nav className="navigation">
-            <Link to="/login" className="nav-item">
-              Login
-            </Link>
-            <Link to="/Signup" className="nav-item">
-              Sign Up
-            </Link>
-          </nav>
+        <div className="pic-name">
+          <img src={prison_logo} alt="side image" />
+          <h1 className="brand-logo">Prison Management</h1>
         </div>
+
+        <nav className="navigation">
+          <Link to="/login" className="nav-item">
+            Login
+          </Link>
+          <Link to="/Signup" className="nav-item">
+            Sign Up
+          </Link>
+        </nav>
       </header>
 
       <section className="main-content">
@@ -86,11 +84,60 @@ const Welcome = () => {
         </article>
       </div>
 
-      <footer className="site-footer">
-        <p>
-          &copy; {new Date().getFullYear()} Prison Management System. All Rights
-          Reserved.
-        </p>
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h2 className="header">About 4 Kilo</h2>
+            <p>
+              4 Kilo is an advanced prison management system designed to
+              streamline operations, ensure data security, and enhance
+              administrative efficiency. Our mission is to provide innovative
+              solutions for modern correctional facilities.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h2 className="header">Quick Links</h2>
+            <ul>
+              <li>
+                <Link to="/home" className="link">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/features" className="link">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link to="/about-us" className="link">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="link">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h2 className="header">Contact Us</h2>
+            <p>
+              <strong>Email:</strong> support4kilo@gmail.com
+            </p>
+            <p>
+              <strong>Phone:</strong> +251 123 456 789
+            </p>
+            <p>
+              <strong>Address:</strong> Addis Ababa, Ethiopia
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 4 Kilo Prison Management System. All Rights Reserved.
+          </p>
+        </div>
       </footer>
     </div>
   );
