@@ -87,7 +87,7 @@ const Welcome = () => {
       <footer class="site-footer">
         <div class="footer-container">
           <div class="footer-about">
-            <h2 className="header">About 4 Kilo</h2>
+            <h2 className="header">About PMS</h2>
             <p>
               4 Kilo is an advanced prison management system designed to
               streamline operations, ensure data security, and enhance
