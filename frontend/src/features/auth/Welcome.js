@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Welcomepage.css";
 import prison_logo from "../../img/prison_logo6.png";
+import prisoners from "../../img/inmates.jpg";
+import staff from "../../img/staff.jpg";
+import medical from "../../img/medical.jpg";
 
 const Welcome = () => {
   return (
@@ -50,35 +53,38 @@ const Welcome = () => {
 
       <div className="choice-section">
         <article className="choice">
-          <img src={prison_logo} alt="side image" />
+          <img src={prisoners} alt="side image" />
           <p>
-            victims services exist to aid individuals who have been victimized
-            by inmates under the department's custody or supervision and notify
-            victims before an inmate's release
+            IMS ensures the secure supervision of inmates, focusing on behavior,
+            risk levels, and rehabilitation. It promotes safety, order, and
+            preparation for reintegration through monitoring, programs, and
+            enforcement of facility rules.
           </p>
-          <Link to="/login" className="link">
+          <Link to="/dashboard" className="link">
             Inmate Management
           </Link>
         </article>
         <article className="choice">
-          <img src={prison_logo} alt="side image" />
+          <img src={staff} alt="side image" />
           <p>
-            victims services exist to aid individuals who have been victimized
-            by inmates under the department's custody or supervision and notify
-            victims before an inmate's release
+            SMS involves recruiting, training, and supporting correctional staff
+            to handle the challenges of their roles. It focuses on performance,
+            safety, and ensuring staff well-being, maintaining a professional,
+            effective workforce within the facility.
           </p>
-          <Link to="/login" className="link">
+          <Link to="/staff" className="link">
             Staff Management
           </Link>
         </article>
         <article className="choice">
-          <img src={prison_logo} alt="side image" />
+          <img src={medical} alt="side image" />
           <p>
-            victims services exist to aid individuals who have been victimized
-            by inmates under the department's custody or supervision and notify
-            victims before an inmate's release
+            MMS provides inmates with healthcare, including routine medical,
+            dental, and mental health services. It addresses physical and
+            psychological needs, ensuring proper treatment while maintaining
+            facility security and medical standards.
           </p>
-          <Link to="/login" className="link">
+          <Link to="/healthcareDashboard" className="link">
             Medical Management
           </Link>
         </article>
