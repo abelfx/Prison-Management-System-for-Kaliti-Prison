@@ -191,7 +191,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1e255e;
-  padding-inline: 1.5rem;
+  padding: 1.5rem;
   color: white;
   font-size: 0.9rem;
 }
@@ -200,13 +200,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
-  max-width: 1200px;
   margin: 0px auto;
-  padding-bottom: 30px;
-}
-
-.footer-container .footer-about {
-  max-width: 600px;
+  padding-inline: 10%;
 }
 
 .footer-container .header {
@@ -220,6 +215,7 @@ body {
 .footer-container .link:hover {
   color: rgb(166, 173, 253);
 }
+
 .footer-bottom {
   text-align: center;
 }
