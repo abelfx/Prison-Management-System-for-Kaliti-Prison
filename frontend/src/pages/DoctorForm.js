@@ -14,6 +14,7 @@ function DoctorForm() {
     MedicalLicenseNumber: "",
     EducationalBackground: "",
     StartDate: "",
+    BaseSalary: "",
   });
 
   const handleChange = (e) => {
@@ -23,12 +24,10 @@ function DoctorForm() {
     });
   };
   const handleSubmit = async (e) => {
+    alert("Doctor added successfully");
     e.preventDefault();
     try {
-      await axios.post(
-        "https://prison-management-system-backend.onrender.com/Doctors",
-        formData
-      );
+      await axios.post("http://localhost:3500/Doctors", formData);
       console.log("Form submitted successfully!");
     } catch (error) {
       console.error("Error:", error);
@@ -176,6 +175,20 @@ function DoctorForm() {
         id="startDate"
         name="StartDate"
         value={formData.StartDate}
+        onChange={handleChange}
+        className="Doctor-form-input"
+        required
+      />
+      <br />
+
+      <label htmlFor="baseSalary" className="Doctor-form-label">
+        BaseSalary
+      </label>
+      <input
+        type="number"
+        id="baseSalary"
+        name="BaseSalary"
+        value={formData.BaseSalary}
         onChange={handleChange}
         className="Doctor-form-input"
         required

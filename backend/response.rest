@@ -59,3 +59,50 @@ Content-Type: application/json
    "username": "abela",
     "password": "something"  
 }
+
+###
+POST http://localhost:3500/Jailors
+Content-Type: application/json
+
+  {
+  "FirstName": "John",
+  "LastName": "Doe",
+  "DateofBirth": "1985-05-15",
+  "NIC": "A12345678",
+  "ContactNumber": 9876543210,
+  "EmergencyContactNumber": 9123456789,
+  "MaritalStatus": "Married",
+  "Religion": "Christianity",
+  "Gender": "Male",
+  "jobTitle": "Senior Jailor",
+  "Department": "Security",
+  "StartDate": "2015-06-01",
+  "EducationalBackground": "Bachelor's Degree in Criminal Justice",
+  "RelevantCertifications": "Certified Correctional Officer",
+  "TrainingCoursesCompleted": "Advanced Security Protocols, Conflict Resolution",
+  "UniformSize": "L",
+  "IssuedEquipment": "Handcuffs, Baton, Radio",
+  "EquipmentTrainingStatus": "Completed",
+  "MedicalConditions": "None",
+  "Allergies": "Peanuts",
+  "EmergencyMedicalInformation": "No chronic illnesses",
+  "BaseSalary": 60000
+}
+
+###
+POST http://localhost:3500/Doctors
+Content-Type: application/json
+
+{
+  "FirstName": "Alice",
+  "LastName": "Smith",
+  "DateofBirth": "1980-10-12",
+  "NIC": 123456789,
+  "ContactNumber": 9876543210,
+  "Gender": "Female",
+  "Specialty": "Cardiologist",
+  "MedicalLicenseNumber": "MLN-987654",
+  "EducationalBackground": "MBBS, MD in Cardiology",
+  "StartDate": "2010-03-01",
+  "BaseSalary": 85000
+}
