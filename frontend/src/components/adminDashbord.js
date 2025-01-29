@@ -173,6 +173,11 @@ function AdminDashboard() {
               Inmate Management
             </Link>
           </div>
+          <div className="admin-main-function">
+            <Link to="/finiancialDashboard" className="nav-link">
+              Finiancial Management
+            </Link>
+          </div>
         </div>
         <div className="admin-function-set">
           <div className="admin-main-function">

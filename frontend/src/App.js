@@ -47,6 +47,9 @@ import AllSecurityStaff from "./SecurityAndIncident/AllSecurityStaff";
 import AllIncident from "./SecurityAndIncident/Incident Management/AllIncident";
 import DoctorList from "./pages/DoctorList";
 
+// finance
+import Finance from "./pages/FinanceDashBoard";
+
 import Home from "./components/Home/Home";
 
 function App() {
@@ -325,6 +328,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/finance"
+          element={
+            <ProtectedRoute>
+              <Finance />
             </ProtectedRoute>
           }
         />

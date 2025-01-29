@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.head {
+  color: blue;
+  font-size: 3rem;
+}
+
+.bluff {
+  font-size: 2rem;
+}
