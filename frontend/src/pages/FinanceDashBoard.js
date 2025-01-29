@@ -3,7 +3,7 @@ const FinanceDashboard = () => {
   return (
     <div className="main">
       <h1 className="head">Page is still under development!</h1>
-      <p className="bluff">It is not you it is us</p>
+      <p className="bluff">It's not you it's us</p>
     </div>
   );
 };
